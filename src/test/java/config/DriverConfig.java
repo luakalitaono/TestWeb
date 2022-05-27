@@ -51,4 +51,38 @@ public class DriverConfig {
         }
     }
 
+    public void switchToDefault() {
+        driver.switchTo().defaultContent();
+    }
+
+    public WebElement findById(String name) {
+        return driver.findElement(By.id(name));
+    }
+
+    public WebElement findByName(String name) {
+        return driver.findElement(By.name(name));
+    }
+
+    public WebElement findByClass(String name) {
+        return driver.findElement(By.className(name));
+    }
+
+    public WebElement findByXpath(String expression) {
+        return driver.findElement(By.xpath(expression));
+    }
+    public void wait(int seconds) {
+       this.wait(seconds * 1.0);
+    }
+    public void wait(double seconds) {
+        try {
+            Thread.sleep((long) seconds * 1000L);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Assert.fail();
+        }
+    }
+
+    public void waitUntil(ExpectedCondition<WebElement> condition) {
+        wait.until(condition);
+    }
 }
