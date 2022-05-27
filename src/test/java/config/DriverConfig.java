@@ -51,6 +51,14 @@ public class DriverConfig {
         }
     }
 
+    public void accessHomePage() {
+        driver.navigate().to(SERVER_URL);
+    }
+
+    public void switchToFrame(WebElement element) {
+        driver.switchTo().frame(element);
+    }
+
     public void switchToDefault() {
         driver.switchTo().defaultContent();
     }
