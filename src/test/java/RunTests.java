@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
         strict = true,
         plugin = {"pretty", "html:build/reports/tests/cucumber/cucumber-report.html"},
         glue = {"steps"},
-        features = {"src/test/resources/features/shop.feature", "src/test/resources/features/register.feature"}
+        features = {"src/test/resources/features"}
 )
 public class RunTests {
 }
