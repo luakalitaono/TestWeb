@@ -15,6 +15,7 @@ dependencies {
 
     implementation("org.seleniumhq.selenium:selenium-java:3.141.59")
     implementation("io.cucumber:cucumber-java:5.6.0")
+    implementation("org.yaml:snakeyaml:1.30")
 
     testImplementation("io.cucumber:cucumber-junit:5.6.0")
     testImplementation("org.hamcrest:hamcrest:2.2")
