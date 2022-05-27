@@ -37,4 +37,18 @@ public class DriverConfig {
         }
     }
 
+    public void insertFormData(String paramName, String filename) {
+        Map<String, String> param = YmlLoader.getParamFromFile(paramName, filename);
+        for (Map.Entry<String, String> row : param.entrySet()) {
+            WebElement element = findById(row.getKey());
+            Assert.assertTrue(element.isEnabled());
+            if (row.getValue() == null || row.getValue().trim().isEmpty()) {
+                element.click();
+            } else {
+                element.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE), row.getValue());
+            }
+            wait(1);
+        }
+    }
+
 }
