@@ -1,5 +1,5 @@
 # TestWeb
-A BDD Cucumber + Selenum project to test the external web site "http://automationpractice.com/"
+A BDD Cucumber + Selenium project to test the external web site "http://automationpractice.com/"
 
 # Prerequisites
 Java 8 or newer version installed in the system
